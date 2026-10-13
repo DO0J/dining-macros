@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optimizer test</title>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 16px; max-width: 900px; }
+  table { border-collapse: collapse; margin: 8px 0 16px; }
+  td, th { border: 1px solid #ccc; padding: 3px 8px; text-align: left; }
+  .warn { color: #a15c00; } .miss { color: #b00020; }
+</style>
+</head>
+<body>
+<h1>Optimizer test</h1>
+<p>Week starting <input type="date" id="from"> <button id="run">Plan week</button> <span id="status"></span></p>
+<div id="out"></div>
+
+<script type="module">
+  // Test page only: the real website comes in phase 4.
+  import { planWeek, DEFAULT_CONFIG, todayISO } from "./optimizer.js";
+
+  const { items, menus } = await fetch("data/menus.json").then((r) => r.json());
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const from = document.getElementById("from");
+  // Default to today, or the first date with data if today has none.
+  from.value = menus.some((m) => m.date === todayISO()) ? todayISO() : menus.map((m) => m.date).sort()[0];
+
+  function plateTable(r) {
+    const rows = r.plate.map((p) => `<tr><td>${p.servings}×</td><td>${esc(p.name)}${p.estimated ? " *" : ""}</td>
+      <td>${esc(p.station)}</td><td>${esc(p.serving)}</td></tr>`).join("");
+    const t = ["calories", "protein_g", "carbs_g", "fat_g"].map((k) =>
+      `<td>${r.totals[k]} / ${r.targets[k]}</td>`).join("");
+    return `<table><tr><th>Servings</th><th>Item</th><th>Station</th><th>Serving size</th></tr>${rows}</table>
+      <table><tr><th>kcal</th><th>Protein g</th><th>Carbs g</th><th>Fat g</th></tr><tr>${t}</tr></table>
+      ${r.misses.map((m) => `<div class="miss">✗ ${esc(m)}</div>`).join("")}
+      ${r.warnings.map((w) => `<div class="warn">⚠ ${esc(w)}</div>`).join("")}`;
+  }
+
+  function run() {
+    const t0 = performance.now();
+    const week = planWeek(items, menus, DEFAULT_CONFIG, { fromDate: from.value });
+    document.getElementById("status").textContent =
+      `${week.ranked.length} menus solved in ${Math.round(performance.now() - t0)} ms, ${week.skipped.length} closed/not posted`;
+    const ranking = week.ranked.map((r) => `<tr><td>${r.rank}</td><td>${r.menu.date}</td><td>${esc(r.menu.hall)}</td>
+      <td>${r.menu.meal}</td><td>${r.fit.score}</td><td>${r.fit.servings}</td><td>${r.misses.length ? "✗" : "✓"}</td></tr>`).join("");
+    document.getElementById("out").innerHTML =
+      `<h2>Ranking (lower score = better)</h2><table><tr><th>#</th><th>Date</th><th>Hall</th><th>Meal</th>
+       <th>Score</th><th>Servings</th><th>Targets</th></tr>${ranking}</table>` +
+      week.ranked.slice(0, 3).map((r) => `<h2>#${r.rank}: ${r.menu.date} ${esc(r.menu.hall)} ${r.menu.meal}</h2>${plateTable(r)}`).join("") +
+      `<p>* estimated numbers (rescaled bulk recipe)</p>`;
+  }
+  document.getElementById("run").addEventListener("click", run);
+  run();
+</script>
+</body>
+</html>
