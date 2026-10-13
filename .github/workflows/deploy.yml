@@ -1,11 +1,12 @@
 # Publishes the web/ folder to GitHub Pages.
-# Runs on every push to main, and can be started by hand from the Actions tab.
+# Runs on every push to main, after update-menus.yml saves new menus, and by hand from the Actions tab.
 name: Deploy site
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_call:
 
 # Pages needs these permissions to publish.
 permissions:
@@ -26,6 +27,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # the newest commit, including menus the update job just saved
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

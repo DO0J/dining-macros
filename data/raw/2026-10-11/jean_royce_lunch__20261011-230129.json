@@ -1,0 +1,107 @@
+{
+  "LocationId": "14629",
+  "MealPeriods": [
+    {
+      "MealPeriod": "Lunch",
+      "Stations": [
+        {
+          "Id": "272219",
+          "Name": "Soup",
+          "Sort": 1,
+          "SubCategories": [
+            {
+              "Items": [
+                {
+                  "AddedSugars": null,
+                  "Allergens": "Complete allergen information is not available. Please contact the on-site manager for assistance.",
+                  "Calories": "4370",
+                  "CaloriesFromFat": "830",
+                  "Cholesterol": "0 mg",
+                  "ContainsEggs": null,
+                  "ContainsFish": null,
+                  "ContainsMilk": null,
+                  "ContainsPeanuts": null,
+                  "ContainsSesame": null,
+                  "ContainsShellfish": null,
+                  "ContainsSoy": null,
+                  "ContainsTreeNuts": null,
+                  "ContainsWheat": null,
+                  "DietaryFiber": "146 g",
+                  "DietaryInformation": "3CGlutenFree;40CEatWell;50CNoDairy;4CVegan;0CVegetarian",
+                  "HideFromDigitalSignage": false,
+                  "Ingredients": "Water, Chickpeas, Tomatoes, Potato, Spinach, Celery, Carrots, Onion, Tomato paste, Vegetable base concentrate, Canola oil, Garlic, Lemon juice, Spanish paprika, Bay leaf, Cumin, Black pepper, SPICE,CINNAMON,GROUND, Cayenne pepper",
+                  "IsDeemphasized": true,
+                  "IsGlutenFree": true,
+                  "IsHalal": false,
+                  "IsKosher": false,
+                  "IsVegan": true,
+                  "IsVegetarian": true,
+                  "Price": 0,
+                  "ProductId": "272168_123607_M1266_4_2532",
+                  "ProductImage": null,
+                  "ProductName": "Moroccan Chickpea Soup",
+                  "Protein": "183 g",
+                  "SaturatedFat": "8 g",
+                  "Serving": "8000 millilitre",
+                  "ShortDescription": "",
+                  "Sodium": "13380 mg",
+                  "Sort": 1,
+                  "Sugars": "181 g",
+                  "TotalCarbohydrates": "740 g",
+                  "TotalFat": "97 g",
+                  "TransFat": "0 g",
+                  "error": null
+                },
+                {
+                  "AddedSugars": null,
+                  "Allergens": "Complete allergen information is not available. Please contact the on-site manager for assistance.",
+                  "Calories": "2790",
+                  "CaloriesFromFat": "830",
+                  "Cholesterol": "910 mg",
+                  "ContainsEggs": null,
+                  "ContainsFish": null,
+                  "ContainsMilk": null,
+                  "ContainsPeanuts": null,
+                  "ContainsSesame": null,
+                  "ContainsShellfish": null,
+                  "ContainsSoy": null,
+                  "ContainsTreeNuts": null,
+                  "ContainsWheat": null,
+                  "DietaryFiber": "31 g",
+                  "DietaryInformation": "3CGlutenFree;50CNoDairy",
+                  "HideFromDigitalSignage": false,
+                  "Ingredients": "Water, Turkey, Cabbage, Onions, Carrots, Mushrooms, Chicken soup base, SAUCE,SOY TAMARI GLUTEN FREE, Green onions, Garlic, Sesame oil, Gingerroot, Salt",
+                  "IsDeemphasized": true,
+                  "IsGlutenFree": true,
+                  "IsHalal": false,
+                  "IsKosher": false,
+                  "IsVegan": false,
+                  "IsVegetarian": false,
+                  "Price": 0,
+                  "ProductId": "272168_123607_M59329_4_42115",
+                  "ProductImage": null,
+                  "ProductName": "Turkey & Egg Roll Soup",
+                  "Protein": "247 g",
+                  "SaturatedFat": "25 g",
+                  "Serving": "8000 millilitre",
+                  "ShortDescription": "",
+                  "Sodium": "25720 mg",
+                  "Sort": 2,
+                  "Sugars": "103 g",
+                  "TotalCarbohydrates": "223 g",
+                  "TotalFat": "93 g",
+                  "TransFat": "0.5 g",
+                  "error": null
+                }
+              ],
+              "Name": "Made-to-Order/Bulk Recipe",
+              "Sort": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "MenuDate": "10/11/2026",
+  "StoreId": 0
+}

@@ -1,0 +1,107 @@
+{
+  "LocationId": "14629",
+  "MealPeriods": [
+    {
+      "MealPeriod": "Lunch",
+      "Stations": [
+        {
+          "Id": "272219",
+          "Name": "Soup",
+          "Sort": 1,
+          "SubCategories": [
+            {
+              "Items": [
+                {
+                  "AddedSugars": null,
+                  "Allergens": "Complete allergen information is not available. Please contact the on-site manager for assistance.",
+                  "Calories": "5510",
+                  "CaloriesFromFat": "290",
+                  "Cholesterol": "220 mg",
+                  "ContainsEggs": null,
+                  "ContainsFish": null,
+                  "ContainsMilk": null,
+                  "ContainsPeanuts": null,
+                  "ContainsSesame": null,
+                  "ContainsShellfish": null,
+                  "ContainsSoy": null,
+                  "ContainsTreeNuts": null,
+                  "ContainsWheat": null,
+                  "DietaryFiber": "66 g",
+                  "DietaryInformation": "",
+                  "HideFromDigitalSignage": false,
+                  "Ingredients": "Water, Potato, Milk, Corn, Vegetable base concentrate, Bacon , Flour , Onion, Celery, Margarine, Garlic, Bay leaf, TABASCO HOT SAUCE, Black pepper, Thyme",
+                  "IsDeemphasized": true,
+                  "IsGlutenFree": false,
+                  "IsHalal": false,
+                  "IsKosher": false,
+                  "IsVegan": false,
+                  "IsVegetarian": false,
+                  "Price": 0,
+                  "ProductId": "272168_123607_M872_4_30496",
+                  "ProductImage": null,
+                  "ProductName": "Bacon Potato Chowder",
+                  "Protein": "156 g",
+                  "SaturatedFat": "62 g",
+                  "Serving": "8000 millilitre",
+                  "ShortDescription": "",
+                  "Sodium": "18380 mg",
+                  "Sort": 1,
+                  "Sugars": "103 g",
+                  "TotalCarbohydrates": "776 g",
+                  "TotalFat": "205 g",
+                  "TransFat": "1 g",
+                  "error": null
+                },
+                {
+                  "AddedSugars": null,
+                  "Allergens": "Complete allergen information is not available. Please contact the on-site manager for assistance.",
+                  "Calories": "5310",
+                  "CaloriesFromFat": "480",
+                  "Cholesterol": "0 mg",
+                  "ContainsEggs": null,
+                  "ContainsFish": null,
+                  "ContainsMilk": null,
+                  "ContainsPeanuts": null,
+                  "ContainsSesame": null,
+                  "ContainsShellfish": null,
+                  "ContainsSoy": null,
+                  "ContainsTreeNuts": null,
+                  "ContainsWheat": null,
+                  "DietaryFiber": "155 g",
+                  "DietaryInformation": "3CGlutenFree;51CCoolFoodMeal;50CNoDairy;4CVegan;0CVegetarian",
+                  "HideFromDigitalSignage": false,
+                  "Ingredients": "Water, Corn, Lentils, Potato, Tomatoes, Onions, Vegetable base concentrate, Carrots, Celery, Tomato paste, Canola oil, Dijon mustard, Salt, Spanish paprika, Garlic, Lime juice, Black pepper, Bay leaf, Thyme",
+                  "IsDeemphasized": true,
+                  "IsGlutenFree": true,
+                  "IsHalal": false,
+                  "IsKosher": false,
+                  "IsVegan": true,
+                  "IsVegetarian": true,
+                  "Price": 0,
+                  "ProductId": "272168_123607_M58002_4_7277",
+                  "ProductImage": null,
+                  "ProductName": "Corn Lentil Soup",
+                  "Protein": "256 g",
+                  "SaturatedFat": "4.5 g",
+                  "Serving": "8000 millilitre",
+                  "ShortDescription": "",
+                  "Sodium": "20200 mg",
+                  "Sort": 2,
+                  "Sugars": "84 g",
+                  "TotalCarbohydrates": "950 g",
+                  "TotalFat": "65 g",
+                  "TransFat": "0 g",
+                  "error": null
+                }
+              ],
+              "Name": "Made-to-Order/Bulk Recipe",
+              "Sort": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "MenuDate": "10/17/2026",
+  "StoreId": 0
+}

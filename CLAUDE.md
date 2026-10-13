@@ -14,8 +14,10 @@ program, and show it in a phone-first web app.
 
 ## Status
 - Done: Phase 1 (fetcher), 2 (cleaner), 3 (optimizer), 4 (website).
-- **Next: Phase 5**: publish `web/` on GitHub Pages, and schedule the fetch + clean
-  (e.g. GitHub Actions) so `web/data/menus.json` stays current. Then test on the real phone.
+- **Phase 5 in progress.** Done: repo https://github.com/DO0J/dining-macros (public). `.github/workflows/deploy.yml`
+  publishes `web/` to https://do0j.github.io/dining-macros/ on every push to main (Pages source = GitHub Actions).
+  The saved login works, so Claude can push. Next: schedule the fetch + clean so `web/data/menus.json` stays current
+  (note: `data/raw/` isn't in the repo, so a cloud job has no archive history), then test on the real phone.
 - Ban Righ (14628) has returned no menus at all (empty `MealPeriods`) since 2026-10-11, though the
   dining site's own config says it isn't closed. The user is checking it. The app shows "No menu posted".
 

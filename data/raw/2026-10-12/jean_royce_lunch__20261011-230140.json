@@ -1,0 +1,107 @@
+{
+  "LocationId": "14629",
+  "MealPeriods": [
+    {
+      "MealPeriod": "Lunch",
+      "Stations": [
+        {
+          "Id": "272219",
+          "Name": "Soup",
+          "Sort": 1,
+          "SubCategories": [
+            {
+              "Items": [
+                {
+                  "AddedSugars": null,
+                  "Allergens": "Complete allergen information is not available. Please contact the on-site manager for assistance.",
+                  "Calories": "3080",
+                  "CaloriesFromFat": "470",
+                  "Cholesterol": "525 mg",
+                  "ContainsEggs": null,
+                  "ContainsFish": null,
+                  "ContainsMilk": null,
+                  "ContainsPeanuts": null,
+                  "ContainsSesame": null,
+                  "ContainsShellfish": null,
+                  "ContainsSoy": null,
+                  "ContainsTreeNuts": null,
+                  "ContainsWheat": null,
+                  "DietaryFiber": "27 g",
+                  "DietaryInformation": "3CGlutenFree;51CCoolFoodMeal;40CEatWell;50CNoDairy",
+                  "HideFromDigitalSignage": false,
+                  "Ingredients": "Water, Chicken breast random, Water, Celery, Onion, Carrots, Long grain rice, Chicken soup base, Canola oil, Garlic, Parsley, Bay leaf, Black pepper, Thyme",
+                  "IsDeemphasized": true,
+                  "IsGlutenFree": true,
+                  "IsHalal": false,
+                  "IsKosher": false,
+                  "IsVegan": false,
+                  "IsVegetarian": false,
+                  "Price": 0,
+                  "ProductId": "272168_123607_M881_4_40118",
+                  "ProductImage": null,
+                  "ProductName": "Chicken & Rice Soup",
+                  "Protein": "230 g",
+                  "SaturatedFat": "10 g",
+                  "Serving": "8000 millilitre",
+                  "ShortDescription": "",
+                  "Sodium": "15760 mg",
+                  "Sort": 1,
+                  "Sugars": "73 g",
+                  "TotalCarbohydrates": "330 g",
+                  "TotalFat": "80 g",
+                  "TransFat": "0 g",
+                  "error": null
+                },
+                {
+                  "AddedSugars": null,
+                  "Allergens": "Complete allergen information is not available. Please contact the on-site manager for assistance.",
+                  "Calories": "2330",
+                  "CaloriesFromFat": "440",
+                  "Cholesterol": "0 mg",
+                  "ContainsEggs": null,
+                  "ContainsFish": null,
+                  "ContainsMilk": null,
+                  "ContainsPeanuts": null,
+                  "ContainsSesame": null,
+                  "ContainsShellfish": null,
+                  "ContainsSoy": null,
+                  "ContainsTreeNuts": null,
+                  "ContainsWheat": null,
+                  "DietaryFiber": "63 g",
+                  "DietaryInformation": "3CGlutenFree;51CCoolFoodMeal;40CEatWell;50CNoDairy;5CVeryVeggie;44CPlantForward;4CVegan;0CVegetarian",
+                  "HideFromDigitalSignage": false,
+                  "Ingredients": "Tomatoes, Water, Onion, Vegetable base concentrate, Lemon juice, Canola oil, Garlic, White sugar, Basil, TABASCO HOT SAUCE, Black pepper",
+                  "IsDeemphasized": true,
+                  "IsGlutenFree": true,
+                  "IsHalal": false,
+                  "IsKosher": false,
+                  "IsVegan": true,
+                  "IsVegetarian": true,
+                  "Price": 0,
+                  "ProductId": "272168_123607_M541_4_9906",
+                  "ProductImage": null,
+                  "ProductName": "Tomato Basil Soup",
+                  "Protein": "59 g",
+                  "SaturatedFat": "3.5 g",
+                  "Serving": "8 litre",
+                  "ShortDescription": "",
+                  "Sodium": "5960 mg",
+                  "Sort": 2,
+                  "Sugars": "180 g",
+                  "TotalCarbohydrates": "389 g",
+                  "TotalFat": "55 g",
+                  "TransFat": "0 g",
+                  "error": null
+                }
+              ],
+              "Name": "Made-to-Order/Bulk Recipe",
+              "Sort": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "MenuDate": "10/12/2026",
+  "StoreId": 0
+}
