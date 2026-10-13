@@ -13,11 +13,16 @@ program, and show it in a phone-first web app.
 - Ask before deleting or overwriting data. Never commit unless asked.
 
 ## Status
-- Done: Phase 1 (fetcher), 2 (cleaner), 3 (optimizer), 4 (website).
-- **Phase 5 in progress.** Done: repo https://github.com/DO0J/dining-macros (public). `.github/workflows/deploy.yml`
-  publishes `web/` to https://do0j.github.io/dining-macros/ on every push to main (Pages source = GitHub Actions).
-  The saved login works, so Claude can push. Next: schedule the fetch + clean so `web/data/menus.json` stays current
-  (note: `data/raw/` isn't in the repo, so a cloud job has no archive history), then test on the real phone.
+- Done: Phase 1 (fetcher), 2 (cleaner), 3 (optimizer), 4 (website), 5 (publishing + scheduled updates). Tested on the real phone.
+- Repo https://github.com/DO0J/dining-macros (public), site https://do0j.github.io/dining-macros/ (Pages source = GitHub Actions).
+  The saved login works, so Claude can push.
+  - `.github/workflows/deploy.yml`: publishes `web/` on every push to main, by hand, or when called by update-menus.
+  - `.github/workflows/update-menus.yml`: 10:17 + 18:17 UTC daily (TZ=America/Toronto) runs fetch + clean. Only if `data/raw`
+    changed does it commit `data/raw` + `web/data/menus.json` as github-actions[bot] and then call deploy (pushes made
+    with the built-in token don't trigger workflows themselves). Built-in token only, no secrets, no pull_request triggers.
+  - Actions: checkout@v7, setup-python@v6 (v7 dropped end-of-life Pythons; 3.10 reaches end of life in Oct 2026), configure-pages@v6,
+    upload-pages-artifact@v5, deploy-pages@v5. `requests` pinned to 2.34.2.
+  - Local runs: `git pull` first. The bot commits new archive files, so the laptop just pulls them.
 - Ban Righ (14628) has returned no menus at all (empty `MealPeriods`) since 2026-10-11, though the
   dining site's own config says it isn't closed. The user is checking it. The app shows "No menu posted".
 
@@ -34,8 +39,8 @@ Run from this folder (`C:\Users\djlav\Downloads\dining-macros`), Python 3.10 (Mi
   content type and browsers then refuse to run JavaScript modules.
 - Node.js is NOT installed and isn't needed. `web/package.json` (`"type": "module"`) only exists so Node can import the modules for testing.
 - Git 2.56 (Git for Windows) is installed and on PATH, with the global name and email set. Sign-in uses Git Credential Manager (a browser login on the first push). Commit email = GitHub noreply `205542163+DO0J@users.noreply.github.com`
-  (username DO0J, with a zero). Repo initialised on branch `main`, no commits or remote yet. `.gitignore` excludes `.venv/`,
-  `data/raw/` and `data/clean/` (regenerated; `web/data/menus.json` IS committed).
+  (username DO0J, with a zero). Branch `main`, remote `origin` = GitHub. `.gitignore` excludes `.venv/`
+  and `data/clean/` (regenerated; `web/data/menus.json` IS committed).
 
 ## Data source
 `https://www.queensu.ca/food/dining/todays-menu/feed?locationId=ID&mealPeriod=Lunch&selDate=MM-DD-YYYY`
@@ -54,7 +59,7 @@ Run from this folder (`C:\Users\djlav\Downloads\dining-macros`), Python 3.10 (Mi
   A new version is saved only if the parsed JSON differs from the newest saved version. Unversioned files
   from before versioning count as the oldest version. Writes go to a temp file first and refuse to overwrite.
 - Server error replies are not archived (they would hide the real menu).
-- `data/raw/` stays out of Git. The user backs it up separately.
+- `data/raw/` is committed to Git (since Phase 5, the user's choice: it's public menu data). GitHub is its backup.
 
 ## Phase 2: cleaner rules (`clean_menus.py`)
 Reads the newest version of each menu (read-only). Writes `data/clean/` (items.json, items.csv, menus.json,
